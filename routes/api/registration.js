@@ -120,7 +120,6 @@ router.put(
 
 router.delete('/:id', async (req, res) => {
     try {
-        console.log('param', req.params.id)
         await Promise.all([
             Registration.findOneAndRemove({ _id: req.params.id })
         ]);
